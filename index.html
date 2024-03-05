@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Best jQuery Dynamic Option Selector Input 2024</title>
+    <meta name="description"
+        content="Dynamic Option Selector Input is a JavaScript tool for enhancing select boxes, allowing users to input custom options seamlessly. Simplify user interaction on web forms with this easy-to-integrate solution.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./fav-iocn.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="container mt-4">
+        <div class="my-5">
+            <h1>jQuery Dynamic Option Selector Input</h1>
+            <p><strong>Dynamic Option Selector Input</strong> is a JavaScript / jQuery tool for enhancing select boxes,
+                allowing users to input
+                custom options seamlessly. Simplify user interaction on web forms with this easy-to-integrate solution.
+                <br> Select boxes have long been a staple in web forms, offering users a convenient way to make choices.
+                However, they come with limitations, particularly when users need to input custom options not predefined
+                in the select list. In this comprehensive guide, we'll delve into the art of enhancing select boxes with
+                dynamic options, using a combination of HTML, CSS, JavaScript, and jQuery to elevate user interaction
+                and satisfaction on web forms.
+            </p>
+        </div>
+
+        <img style="height: 50px;margin: 0 auto; display: block;" src="./Dynamic Option Selector Input.png"
+            alt="Dynamic Option Selector Input">
+
+        <h2>Enhancing Select Boxes with Dynamic Option Selector Input </h2>
+        <div class="form-group mb-0">
+            <label for="selectBox">Email address:</label>
+            <select id="selectBox" class="form-control">
+                <option value="item1" selected>Select Options</option>
+                <option value="item2">Select Options</option>
+                <option value="other">Other Options</option>
+            </select>
+        </div>
+
+        <div class="form-group mb-0" id="otherInput" style="display: none;">
+            <input type="text" class="form-control" id="textInput" placeholder="Enter something">
+        </div>
+
+        <div class="code-block mt-3">
+            <h2>HTML Code</h2>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="form-group mb-0"&gt;
+                        &lt;label for="selectBox"&gt;Email address:&lt;/label&gt;
+                        &lt;select id="selectBox" class="form-control"&gt;
+                            &lt;option value=""&gt;Select Options&lt;/option&gt;
+                            &lt;option value=""&gt;Select Options&lt;/option&gt;
+                            &lt;option value=""&gt;Other Options&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class="form-group mb-0" id="otherInput" style="display: none;"&gt;
+                        &lt;input type="text" class="form-control" id="textInput" placeholder="Enter something"&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+
+        <div class="code-block mt-3">
+            <h2>JavaScript Code</h2>
+            <pre>
+                <code class="language-html">
+                     &lt;script&gt;
+                        $(document).ready(function () {
+                            $("#selectBox").change(function () {
+                                var selectValue = $(this).val();
+                                if (selectValue === "other") {
+                                    $("#otherInput").show();
+                                    $("#selectBox").hide();
+                                    $("#textInput").focus();
+                                } else {
+                                    $("#otherInput").hide();
+                                }
+                            });
+
+                            $("#textInput").keypress(function (event) {
+                                if (event.which === 13) { // Enter key code
+                                    var inputValue = $(this).val().trim();
+                                    if (inputValue !== "") {
+                                        $("option[value='other']").text(inputValue).prop("selected", true);
+                                        $("#otherInput").hide();
+                                        $("#selectBox").show();
+                                        $(this).val(""); // Clear input field
+                                    }
+                                    return false; // Prevent form submission
+                                }
+                            });
+                        });
+                    &lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+
+        <div class="content mt-4">
+            <h2>Understanding the Problem:</h2>
+            <p>Traditional select boxes restrict users to a predefined set of options, often leading to frustration when
+                their desired choice isn't available. This limitation undermines user experience and can result in
+                abandoned forms, negatively impacting conversion rates and overall website usability.</p>
+        </div>
+        <div class="content mt-4">
+            <h2>Solution Overview:</h2>
+            <p>Our solution involves dynamically revealing an input field when users select an "Other" option from the
+                select box. This empowers users to input custom options seamlessly, addressing their unique needs and
+                preferences.</p>
+        </div>
+        <div class="content mt-4">
+            <h3>Step 1: HTML Setup:</h3>
+            <p>Begin by setting up the HTML structure for your form. Include a select box and an input field within a
+                container element.</p>
+        </div>
+        <div class="content mt-4">
+            <h3>Step 2: Styling with CSS:</h3>
+            <p>Enhance the appearance of the select box and input field using CSS to ensure a visually appealing user
+                interface.</p>
+        </div>
+        <div class="content mt-4">
+            <h3>Step 3: Adding Dynamic Behavior with JavaScript:</h3>
+            <p>Utilize JavaScript to detect changes in the select box and dynamically reveal the input field when the
+                "Other" option is selected.</p>
+        </div>
+        <div class="content mt-4">
+            <h3>Step 4: Handling User Input:</h3>
+            <p>
+                Implement event listeners to capture user input from the input field and update the select box
+                accordingly.</p>
+        </div>
+        <div class="content mt-4">
+            <h3>Testing and Optimization:</h3>
+            <p>
+
+                Thoroughly test the enhanced select box across various browsers and devices to ensure compatibility and
+                usability. Additionally, optimize the solution for performance and accessibility.</p>
+        </div>
+        <div class="content mt-4">
+            <h2>How to Use:</h2>
+            <p>
+            <ul>
+                <li><strong>Include HTML Markup:</strong> Copy the provided <a
+                        href="https://www.w3schools.com/html/default.asp">HTML</a> structure into your web form,
+                    ensuring
+                    that the select box and input field are properly nested within container elements.</li>
+                <li><strong>Style with CSS:</strong> Customize the appearance of the select box and input field to align
+                    with your website's design aesthetic using CSS.</li>
+                <li><strong>Implement JavaScript: </strong> Integrate the JavaScript code snippet into your web page to
+                    enable dynamic behavior for the select box and input field.</li>
+                <li><strong>Test and Iterate:</strong> Test the enhanced select box rigorously across different
+                    environments, gathering feedback from real users to identify any potential issues and iteratively
+                    improve the implementation.</li>
+            </ul>
+            </p>
+        </div>
+        <div class="content mt-4">
+            <h2>Conclusion:</h2>
+            <p>
+                By enhancing select boxes with dynamic options, you can revolutionize user input on web forms, providing
+                users with greater flexibility and control over their choices. Through careful implementation and
+                testing, you can elevate the user experience, leading to higher engagement, increased conversions, and
+                ultimately, greater success for your website or application. Embrace the power of dynamic select boxes
+                to unlock a new level of interactivity and user satisfaction in your <a
+                    href="https://github.com/chbappy-cse"> web forms</a>.
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
